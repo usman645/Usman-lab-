@@ -457,38 +457,45 @@
         </section>
         
         <section id="booking" style="background-color: var(--white); padding: 2rem; border-radius: 10px; box-shadow: var(--box-shadow); margin: 3rem 0; text-align: center;">
-            <h2 class="section-title">Book Your Appointment</h2>
-            <p>Fill out the form below to schedule your diagnostic test</p>
-            <form style="max-width: 600px; margin: 0 auto; text-align: left;">
-                <div style="margin-bottom: 1rem;">
-                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name</label>
-                    <input type="text" id="name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                </div>
-                
-                <div style="margin-bottom: 1rem;">
-                    <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone Number</label>
-                    <input type="tel" id="phone" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                </div>
-                
-                <div style="margin-bottom: 1rem;">
-                    <label for="service" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Service Required</label>
-                    <select id="service" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                        <option value="">Select a service</option>
-                        <option value="xray">X-Ray (PKR 1,000)</option>
-                        <option value="ultrasound">Ultrasound (PKR 1,500)</option>
-                        <option value="ecg">ECG (PKR 500)</option>
-                    </select>
-                </div>
-                
-                <div style="margin-bottom: 1rem;">
-                    <label for="date" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Preferred Date</label>
-                    <input type="date" id="date" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                </div>
-                
-                <button type="submit" class="btn" style="width: 100%;">Book Now</button>
-            </form>
-        </section>
-    </div>
+        <!-- Add this in your HTML file (where the form should appear) -->
+<form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+    <h3>Book a Diagnostic Scan</h3>
+    
+    <!-- Hidden fields for FormSubmit configuration -->
+    <input type="hidden" name="_subject" value="New Scan Booking!">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://usman645.github.io/repository-name/thank-you.html">
+    
+    <!-- Patient Details -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <label for="email">Email (Optional):</label>
+    <input type="email" id="email" name="email">
+    
+    <!-- Scan Type Selection -->
+    <label for="scan-type">Select Scan:</label>
+    <select id="scan-type" name="scan-type" required>
+        <option value="">-- Choose --</option>
+        <option value="xray">X-Ray (PKR 1000)</option>
+        <option value="ultrasound">Ultrasound (PKR 1500)</option>
+        <option value="ecg">ECG (PKR 500)</option>
+    </select>
+    
+    <!-- Date Selection -->
+    <label for="date">Preferred Date:</label>
+    <input type="date" id="date" name="date" required>
+    
+    <!-- Additional Notes -->
+    <label for="notes">Special Instructions (if any):</label>
+    <textarea id="notes" name="notes"></textarea>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="btn">Book Now</button>
+</form>
     
     <footer>
         <div class="footer-content">
